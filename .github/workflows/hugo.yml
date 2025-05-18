@@ -53,7 +53,7 @@ jobs:
         run: git config core.quotepath false
       - name: Build with Hugo
         run: |
-          hugo mod get -u
+          hugo mod get github.com/clente/hugo-bearcub
           hugo \
             --gc \
             --minify \
