@@ -1,40 +1,44 @@
 import type { Metadata, Site, Socials } from "@types";
 
 export const SITE: Site = {
-  TITLE: "Astro Micro",
-  DESCRIPTION: "Astro Micro is an accessible and lightweight blog.",
-  EMAIL: "trevortylerlee@gmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 5,
+  TITLE: "krissh",
+  DESCRIPTION: "mon site personnel",
+  EMAIL: "moi@krissh.wtf",
+  NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_PROJECTS_ON_HOMEPAGE: 3,
 };
 
 export const HOME: Metadata = {
-  TITLE: "Home",
+  TITLE: "index",
   DESCRIPTION: "Astro Micro is an accessible theme for Astro.",
 };
 
 export const BLOG: Metadata = {
-  TITLE: "Blog",
-  DESCRIPTION: "A collection of articles on topics I am passionate about.",
+  TITLE: "blog",
+  DESCRIPTION: "une collection d'articles sur des sujets qui me passionnent.",
 };
 
 export const PROJECTS: Metadata = {
-  TITLE: "Projects",
+  TITLE: "projets",
   DESCRIPTION:
-    "A collection of my projects with links to repositories and live demos.",
+    "une collection de mes projets avec des liens vers des référentiels et des démonstrations en direct.",
 };
 
 export const SOCIALS: Socials = [
   {
-    NAME: "X (formerly Twitter)",
-    HREF: "https://twitter.com/boogerbuttcheek",
+    NAME: "discord",
+    HREF: "https://discord.com/users/873268348748697600",
   },
   {
-    NAME: "GitHub",
-    HREF: "https://github.com/trevortylerlee",
+    NAME: "github",
+    HREF: "https://github.com/krissh-wtf",
   },
   {
-    NAME: "Website",
-    HREF: "https://trevortylerlee.com",
+    NAME: "twitter",
+    HREF: "https://twitter.com/krissh_wtf",
+  },
+  {
+    NAME: "site",
+    HREF: "https://krissh.wtf",
   },
 ];

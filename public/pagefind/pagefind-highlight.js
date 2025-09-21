@@ -825,7 +825,7 @@ var require_mark = __commonJS({
           value: function markRegExp(regexp, opt) {
             var _this9 = this;
             this.opt = opt;
-            this.log('Searching with expression "' + regexp + '"');
+            this.log('searching with expression "' + regexp + '"');
             var totalMatches = 0, fn = "wrapMatches";
             var eachCb = function eachCb2(element) {
               totalMatches++;
@@ -851,7 +851,7 @@ var require_mark = __commonJS({
             var totalMatches = 0, fn = "wrapMatches";
             var _getSeparatedKeywords = this.getSeparatedKeywords(typeof sv === "string" ? [sv] : sv), kwArr = _getSeparatedKeywords.keywords, kwArrLen = _getSeparatedKeywords.length, sens = this.opt.caseSensitive ? "" : "i", handler = function handler2(kw) {
               var regex = new RegExp(_this10.createRegExp(kw), "gm" + sens), matches = 0;
-              _this10.log('Searching with expression "' + regex + '"');
+              _this10.log('searching with expression "' + regex + '"');
               _this10[fn](regex, 1, function(term, node) {
                 return _this10.opt.filter(node, kw, totalMatches, matches);
               }, function(element) {
@@ -885,7 +885,7 @@ var require_mark = __commonJS({
             this.opt = opt;
             var totalMatches = 0, ranges = this.checkRanges(rawRanges);
             if (ranges && ranges.length) {
-              this.log("Starting to mark with the following ranges: " + JSON.stringify(ranges));
+              this.log("starting to mark with the following ranges: " + JSON.stringify(ranges));
               this.wrapRangeFromIndex(ranges, function(node, range, match, counter) {
                 return _this11.opt.filter(node, range, match, counter);
               }, function(element, range) {

@@ -6,14 +6,18 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-micro.vercel.app",
+  site: "https://krissh.wtf",
   integrations: [sitemap(), mdx(), pagefind()],
   vite: {
     plugins: [tailwindcss()],
   },
   markdown: {
     shikiConfig: {
-      theme: "css-variables",
+      theme: "material-theme-darker",
     },
   },
+  i18n: {
+    locales: ["en", "fr"],
+    defaultLocale: "fr"
+  }
 });
