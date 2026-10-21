@@ -14,11 +14,10 @@ export default function () {
       month: "2-digit",
       year: "numeric",
       timeZone: "UTC",
-    }).format(new Date(iso)); // 12/09/2008 (DD/MM/YYYY)
+    }).format(new Date(iso));
 
     return { hash, short, date };
   } catch {
-    // not a git repo, or git isn't installed on the build machine
     return { hash: "", short: "unknown", date: "" };
   }
 }
