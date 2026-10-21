@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="alternate" hreflang="{{ lang }}" href="{{ page.url }}">
   <title>{{ title | default: "kri:~> ssh wtf ▌" }}</title>
+  {% render "components/ogp" %}
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -15,11 +16,11 @@
 
 <body>
   <k-k>
-    {% render "components/header.liquid" %}
+    {% render "components/header" %}
     <k-m>
       {{ content }}
     </k-m>
-    {% render "components/footer.liquid", git: git %}
+    {% render "components/footer", git: git %}
   </k-k>
 </body>
 
