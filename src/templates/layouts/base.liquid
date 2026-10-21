@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ lang }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ page.url }}">
+  <title>{{ title | default: "kri:~> ssh wtf ▌" }}</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script defer src="/assets/js/oneko.js"></script>
+  <script src="/assets/js/title.js"></script>
+</head>
+
+<body>
+  <k-k>
+    {% render "components/header.liquid" %}
+    <k-m>
+      {{ content }}
+    </k-m>
+    {% render "components/footer.liquid" %}
+  </k-k>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+:root {
+  --bg: #18181b;
+  --fg: #f0f8ff;
+  --sp: #5a5af2;
+  --sp2: #509e50;
+  --li: #3d3d40;
+  --nav-w: 6.5rem;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-block-size: 100dvb;
+  padding: 0.5rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: monospace;
+}
+
+k-k {
+  display: grid;
+  inline-size: min(100%, 60ch);
+  border: 1px solid var(--li);
+
+  & > * {
+    padding: 0.5rem;
+  }
+
+  & > * + * {
+    border-block-start: 1px solid var(--li);
+  }
+
+  & a {
+    color: var(--sp);
+    text-decoration: underline var(--sp2);
+  }
+
+  & :is(k-c > k-n nav, k-i18n) > a {
+    padding: 0 0.5rem;
+    line-height: 1.25;
+    text-align: center;
+    background: var(--bg);
+    border: 1px solid var(--li);
+  }
+
+  & > k-h {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    container-type: inline-size;
+
+    & img {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+    }
+
+    /* title + quote left, nav right */
+    & > k-c {
+      display: grid;
+      grid-template-areas:
+        "title nav"
+        "quote nav";
+      grid-template-columns: 1fr var(--nav-w);
+      gap: 0 0.5rem;
+
+      & > h1 {
+        grid-area: title;
+        white-space: nowrap;
+
+        & k-p { color: var(--sp); }
+        & k-n { color: var(--sp2); }
+      }
+
+      & > p {
+        grid-area: quote;
+      }
+
+      & > k-n {
+        grid-area: nav;
+        align-self: center;
+      }
+
+      & nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      /* too narrow: nav drops under the quote, as a row */
+      @container (width < 19rem) {
+        grid-template-areas:
+          "title"
+          "quote"
+          "nav";
+        grid-template-columns: 1fr;
+
+        & nav {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  & > k-m {
+    & b {
+      color: var(--sp2);
+    }
+
+    & h1, h2, h3, h4, h5, h6 {
+      font-weight: normal;
+      text-decoration: underline var(--sp);
+    }
+  }
+
+  & > k-f {
+    display: grid;
+    grid-template-columns: 1fr var(--nav-w);
+    align-items: center;   /* add this */
+    gap: 0.5rem;
+
+    & k-i18n {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.25rem;
+    }
+  }
+}
